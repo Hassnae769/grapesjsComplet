@@ -1,9 +1,13 @@
 export default (editor, opts = {}) => {
   const bm = editor.BlockManager;
 
-  bm.add('MY-BLOCK', {
-    label: 'My block',
-    content: { type: 'MY-COMPONENT' },
-    // media: '<svg>...</svg>',
+  bm.add('merge-field-firstname', {
+    label: 'Prénom Contact',
+    category: 'Champs de fusion',
+    content: {
+      type: 'text',
+      content: '{{Contact.FirstName}}',
+    },
   });
 };
+
